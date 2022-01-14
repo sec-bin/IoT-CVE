@@ -10,7 +10,7 @@ This function uses `strcpy` to copy the string pointed by `v3` into a stack buff
 
 ![image-20220115002654353](img/1.png)
 
-So when strcpy is called, a stack overflow occurs, the attacker can easily perform a **DoS Attack**
+So when strcpy is called, a stack overflow occurs, the attacker can easily perform a **DoS Attack**.
 
 ## POC
 
