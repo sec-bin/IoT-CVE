@@ -8,7 +8,7 @@ There is a stack buffer overflow vulnerability in function `sub_422CE4`
 
 This function uses `strcpy` to copy the string pointed by `v3` into a stack buffer pointed by `v22`,while `v3` gets in a parameter called `conType` and use that input value without any check.
 
-![image-20220115002654353](img/1.png)
+![image-20220115002654353](1.png)
 
 So when strcpy is called, a stack overflow occurs, the attacker can easily perform a **DoS Attack**.
 

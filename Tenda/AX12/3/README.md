@@ -8,11 +8,11 @@ There is a stack buffer overflow vulnerability in function `sub_422CE4`
 
 This function uses `sprintf(... , "%s" , ...)` to copy the string pointed by `v2` into a stack buffer pointed by `v19`.
 
-![image-20220115012833809](img/1.png)
+![image-20220115012833809](1.png)
 
 However, `v2` gets in a parameter called `ssid` and use that input value without any check.
 
-![image-20220115012938701](img/2.png)
+![image-20220115012938701](2.png)
 
 So it caused stack overflow, the attacker can easily perform a **DoS Attack**.
 
