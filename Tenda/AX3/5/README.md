@@ -8,7 +8,7 @@ Vulnerable function fromSetIpMacBind
 
 ![image-20220117231339966](1.png)
 
-The variable v4 is directly obtained directly from the http request parameter list.
+The variable v4 is directly obtained directly from the http request parameter list without any sercuity check. 
 
 v4 will be copied to the stack variable s by the strcpy function, resulting in stack overflow.
 
