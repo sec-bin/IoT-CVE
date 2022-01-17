@@ -18,9 +18,9 @@ Attacker can construct a long ssid parameter in the http request,which causes st
 
  
 
-The v22 variable is directly retrieved from the http request parameter TimeZone.
+The v20 variable is directly retrieved from the http request parameter TimeZone.
 
-Then v22 will be splice to stack by function sscanf without any security check,which causes stack overflow.
+Then v20 will be splice to stack by function sscanf without any security check,which causes stack overflow.
 
 Combining the above two vulnerabilities can cause arbitrary code execution.
 
