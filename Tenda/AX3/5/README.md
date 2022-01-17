@@ -4,7 +4,7 @@ There is a vulnerability lies in page /goform/SetIpMacBind,which influences the 
 
 ## Description
 
-Vulnerability function fromSetIpMacBind
+Vulnerable function fromSetIpMacBind
 
 ![image-20220117231339966](1.png)
 
