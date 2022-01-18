@@ -41,6 +41,6 @@ lanIp=192.168.0.1;reboot;
 
 ## Timeline
 
-- 2021-12-28  report to CNVD&CVE 
+- 2021-12-28  report to CNVD & CVE 
 
-- 2022-1-14    CNVD ID assigned : CNVD-2022-03736
+- 2022-01-14  CNVD ID assigned : CNVD-2022-03736

@@ -39,4 +39,5 @@ print(r.content)
 
 ## Timeline
 
-- 2021-12-31 report to CNVD&CVE
+- 2021-12-31 report to CNVD & CVE
+- 2022-01-18 CNVD ID assigned : CNVD-2022-04451
