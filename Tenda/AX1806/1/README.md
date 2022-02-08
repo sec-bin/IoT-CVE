@@ -1,4 +1,4 @@
-Affect device: Tenda Router AX1806
+Affect device: Tenda Router AX1806 v1.0.0.1(https://www.tenda.com.cn/download/detail-3306.html)
 
 Vulnerability Type: Stack overflow
 
