@@ -14,9 +14,9 @@ There is a stack overflow vulnerability in the `formSetSysToolDDNS` function.
 
 
 
-The `v2` variable is obtained directly from the http request parameter `ddnsDomain`.
+The `v6` variable is obtained directly from the http request parameter `ddnsDomain`.
 
-This function uses strcpy to copy the **variable v2 to the stack variable v15** without any sercuity check.
+This function uses strcpy to copy the **variable v6 to the stack variable v18** without any sercuity check.
 
 ![image-20220208223342014](image/1.png)
 

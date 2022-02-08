@@ -12,7 +12,7 @@
 
 
 
-v2直接来自于http数据包中的ddnsEn参数，随后，该函数调用了strcpy函数而未对ddnsUser参数做任何安全性检查
+v4直接来自于http数据包中的ddnsEn参数，随后，该函数调用了strcpy函数而未对ddnsUser参数做任何安全性检查
 
 ![image-20220208222826121](image/1.png)
 
