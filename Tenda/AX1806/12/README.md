@@ -12,11 +12,11 @@ There is a stack buffer overflow vulnerability in the `saveParentControlInfo` fu
 
 First， this function calls the sub_60BE0 function.
 
-![image-20220209004540591](README_zh/image-20220209004540591.png)
+![image-20220209004540591](image/1.png)
 
 In the sub_60BE0 function, the `v12` variable is directly retrieved from the http request parameter `time`.
 
-![image-20220209004630375](README_zh/image-20220209004630375.png)
+![image-20220209004630375](image/2.png)
 
 Then `v12` will be splice to stack by function sscanf without any security check, which causes stack overflow.
 

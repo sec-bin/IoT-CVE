@@ -12,11 +12,11 @@
 
 首先，saveParentControlInfo函数会调用到sub_60BE0函数
 
-![image-20220209004540591](README_zh/image-20220209004540591.png)
+![image-20220209004540591](image/1.png)
 
 而在sub_60BE0函数中，v12来源于http数据包中的time参数
 
-![image-20220209004630375](README_zh/image-20220209004630375.png)
+![image-20220209004630375](image/2.png)
 
 接着，该函数会直接调用sscanf函数来将v12切割到栈上，没有任何的安全检测
 
