@@ -10,6 +10,8 @@ This vulnerability lies in the `/goform/SetSysTimeCfg` page which influences the
 
 
 
+There is a stack overflow vulnerability in the `fromSetSysTime` function.
+
 The `v4` variable is obtained directly from the http request parameter `ntpServer`.
 
 This function uses strcpy to copy the **variable v4 to the stack variable &v33[16]** without any sercuity check.
