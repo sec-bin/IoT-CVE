@@ -27,7 +27,7 @@ Remote Code Exection
 ```python
 # Title: Exploit of Tenda-AX3's buffer overflow 
 # Author: R1nd0&c0rn
-# Date: 12/01/2022
+# Date: 2022
 # Vendor Homepage: https://www.tenda.com.cn/
 # Version: AX1806 v1.0.0.1
 

