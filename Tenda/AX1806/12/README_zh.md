@@ -28,8 +28,6 @@
 
 任意代码执行的exp：
 
-```http
-
 ```python
 from pwn import*
 import requests
