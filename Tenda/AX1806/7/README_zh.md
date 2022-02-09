@@ -12,7 +12,7 @@
 
 
 
-v5直接来自于http数据包中的ddnsEn参数，随后，该函数调用了strcpy函数而未对ddnsPwd参数做任何安全性检查
+v5直接来自于http数据包中的ddnsPwd参数，随后，该函数调用了strcpy函数而未对ddnsPwd参数做任何安全性检查
 
 ![image-20220208223120153](image/1.png)
 
