@@ -1,10 +1,10 @@
 # Tenda Router AX12 Vulnerability
 
-This vulnerability lies in the `goform/setIPv6Status` page which influences the lastest version of Tenda Router AX12. (lastest version of this product is [V22.03.01.21_CN](https://www.tenda.com.cn/download/detail-3237.html))
+This vulnerability lies in the `goform/fast_setting_wifi_set` page which influences the lastest version of Tenda Router AX12. (lastest version of this product is [V22.03.01.21_CN](https://www.tenda.com.cn/download/detail-3237.html))
 
 ## Vulnerability description
 
-There is a stack buffer overflow vulnerability in function `sub_422CE4`
+There is a stack buffer overflow vulnerability in function `sub_4335C0`
 
 This function uses `sprintf(... , "%s" , ...)` to copy the string pointed by `v2` into a stack buffer pointed by `v19`.
 

@@ -8,7 +8,7 @@
 
 # 漏洞成因
 
-这是一个存在于`sub_422CE4`函数中的栈溢出漏洞，该函数处理/goform/fast_setting_wifi_set页面下的post请求
+这是一个存在于`sub_4335C0`函数中的栈溢出漏洞，该函数处理/goform/fast_setting_wifi_set页面下的post请求
 
 该函数使用sprintf+"%s"来将v2输入到栈上，但是没有任何的安全检测
 
