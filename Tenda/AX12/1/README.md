@@ -34,3 +34,4 @@ conType=aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaamaaanaaaoaaapaaaqaaaraaa
 
 - 2021.12.19 report to CVE & CNVD
 - 2022.01.07 CNVD ID assigned: CNVD-2022-01444
+- 2022.02.10 CVE ID assigned : CVE-2021-45391
